@@ -1,4 +1,8 @@
 {
-	"home" : "Home",
-	"user" : "User"
+	"title": "The title",
+	"menu": {
+		"home": "Home",
+		"test": "Test",
+		"results": "Results"
+	}
 }

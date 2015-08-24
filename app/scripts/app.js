@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name youCanCookieTApp
+ * @name soundsAndColorsApp
  * @description
- * # youCanCookieTApp
+ * # soundsAndColorsApp
  *
  * Main module of the application.
  */
 angular
-  .module('youCanCookieTApp', [
+  .module('soundsAndColorsApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -37,13 +37,21 @@ angular
       .useMissingTranslationHandlerLog()
       .preferredLanguage('hu')
       .useLoaderCache(true);
-      
+
   })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+      })
+      .when('/test', {
+        templateUrl: 'views/test.html',
+        controller: 'TestCtrl'
+      })
+      .when('/results', {
+        templateUrl: 'views/results.html',
+        controller: 'ResultsCtrl'
       })
       .otherwise({
         redirectTo: '/'

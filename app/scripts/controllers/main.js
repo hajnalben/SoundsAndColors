@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the youCanCookieTApp
  */
-angular.module('youCanCookieTApp')
-  .controller('MainCtrl', function ($scope) {
-  	
-  });
+angular.module('soundsAndColorsApp')
+	.controller('MainCtrl', function ($scope) {
+
+	});
