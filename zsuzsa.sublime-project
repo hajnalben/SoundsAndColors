@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				".*"
+			],
+			"folder_exclude_patterns":
+			[
+				".*",
+				"node_modules",
+				"bower_components"
+			],
+			"path": "."
+		},
+		{
+			"path": "/Users/bhajnal/Library/Application Support/Sublime Text 3/Packages/Angular-project-sublime"
+		}
+	]
+}
