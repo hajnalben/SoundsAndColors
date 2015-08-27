@@ -8,9 +8,23 @@
     "label": {
         "sex": "Nem",
         "age": "Életkor",
-        "level": "Zenében jártasság"
+        "level": "Zenében jártasság",
+        "replay": "Újra",
+        "next": "Tovább"
     },
     "value": {
         "man": "Férfi",
+        "woman": "Nő",
+        "level": {
+            "none": "Zuhany alatt éneklő",
+            "beginner": "Tanultam valamennyit",
+            "advance": "Sokat tanultam, használom is tudásom",
+            "expert": "Ebből élek"
+        }
+    },
+    "text": {
+        "testIntro": "Most izét fogsz kitölteni.... lesz x másodperced rá, hogy ...",
+        "closeYourEyes": "Csukd be szemed",
+        "footer": "Ez a lábléc, ide lehet írni infókat"
     }
 }

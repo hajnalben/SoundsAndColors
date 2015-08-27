@@ -4,12 +4,14 @@
             <h3 translate="label.sex"></h3>
             <div class="radio">
                 <label>
-                    <input type="radio" value="man" ng-model="sex" translate="value.man"/>
+                    <input type="radio" value="man" ng-model="sex" />
+                    <span translate="value.man"></span>
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" value="woman" ng-model="sex" />Nő
+                    <input type="radio" value="woman" ng-model="sex" />
+                    <span translate="value.woman"></span>
                 </label>
             </div>
         </div>
@@ -21,46 +23,47 @@
             <h3 translate="label.level"></h3>
             <div class="radio">
                 <label>
-                    <input type="radio" value="1" ng-model="level" />Zuhany alatt éneklő
+                    <input type="radio" value="1" ng-model="level" />
+                    <span translate="value.level.none"></span>
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" value="2" ng-model="level" />Tanultam valamennyit
+                    <input type="radio" value="2" ng-model="level" />
+                    <span translate="value.level.beginner"></span>
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" value="3" ng-model="level" />Sokat tanultam, használom is tudásom
+                    <input type="radio" value="3" ng-model="level" />
+                    <span translate="value.level.advanced"></span>
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" value="4" ng-model="level" />Ebből élek
+                    <input type="radio" value="4" ng-model="level" />
+                    <span translate="value.level.expert"></span>
                 </label>
             </div>
         </div>
     </form>
 </div>
-
 <div ng-if="testState == 1">
-    Most izét fogsz kitölteni.... lesz x másodperced rá, hogy ...
+    <span translate="text.testIntro"></span>
 </div>
-
 <div ng-if="testState == 2">
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
-        </div>
-    </div>
     <button class="btn btn-success btn-lg" ng-disabled="isPlayingSound">
-        <span class="glyphicon glyphicon-play" aria-hidden="true" ng-click="playSound()">Újra</span>
+        <span class="glyphicon glyphicon-play" aria-hidden="true" ng-click="playSound()" translate="label.replay"></span>
     </button>
     <div ng-if="circleVisible">
         <canvas id="pie" class="chart chart-pie" data="data" labels="labels" click="chooseColor"></canvas>
     </div>
     <div ng-if="!circleVisible" style="height: 355px">
-    csukd be szemed
+        <span translate="text.closeYourEyes"></span>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+        </div>
     </div>
 </div>
-
-<button class="btn btn-primary btn-lg" ng-hide="testState == 2 || testState == 3" ng-click="nextState()" ng-disabled="isPlayingSound">Tovább</button>
+<button class="btn btn-primary btn-lg" ng-hide="testState == 2 || testState == 3" ng-click="nextState()" ng-disabled="isPlayingSound" translate="label.next"></button>
