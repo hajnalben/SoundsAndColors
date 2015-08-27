@@ -25,6 +25,9 @@
     "text": {
         "testIntro": "Most izét fogsz kitölteni.... lesz x másodperced rá, hogy ...",
         "closeYourEyes": "Csukd be szemed",
-        "footer": "Ez a lábléc, ide lehet írni infókat"
+        "footer": "Ez a lábléc, ide lehet írni infókat",
+        "welcome": "Sziasztok ...!",
+        "about": "Ez egy teszt, ami...",
+        "proceedToTest": "Tovább a tesztre"
     }
 }

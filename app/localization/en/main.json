@@ -1,8 +1,33 @@
 {
-	"title": "The title",
-	"menu": {
-		"home": "Home",
-		"test": "Test",
-		"results": "Results"
-	}
+    "title": "The title",
+    "menu": {
+        "home": "Home",
+        "test": "Test",
+        "results": "Results"
+    },
+    "label": {
+        "sex": "Sex",
+        "age": "Age",
+        "level": "Skills in music",
+        "replay": "Replay",
+        "next": "Next"
+    },
+    "value": {
+        "man": "Male",
+        "woman": "Female",
+        "level": {
+            "none": "Level 1",
+            "beginner": "Level 2",
+            "advance": "Leve 3",
+            "expert": "Level 4"
+        }
+    },
+    "text": {
+        "testIntro": "You are going to... You will have x secs to ...",
+        "closeYourEyes": "Now close your eyes",
+        "footer": "This it the footer",
+        "welcome": "Welcome to my test!",
+        "about": "The test is about...",
+        "proceedToTest": "Let's start the test"
+    }
 }
