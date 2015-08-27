@@ -1,1 +1,66 @@
-<p>This is the test view.</p>
+<div id="firstStep" ng-if="testState == 0">
+    <form role="firstForm">
+        <div class="form-group">
+            <h3 translate="label.sex"></h3>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="man" ng-model="sex" translate="value.man"/>
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="woman" ng-model="sex" />Nő
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <h3 translate="label.age"></h3>
+            <rzslider rz-slider-model="age" rz-slider-floor="4" rz-slider-ceil="99"></rzslider>
+        </div>
+        <div class="form-group">
+            <h3 translate="label.level"></h3>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="1" ng-model="level" />Zuhany alatt éneklő
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="2" ng-model="level" />Tanultam valamennyit
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="3" ng-model="level" />Sokat tanultam, használom is tudásom
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="4" ng-model="level" />Ebből élek
+                </label>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div ng-if="testState == 1">
+    Most izét fogsz kitölteni.... lesz x másodperced rá, hogy ...
+</div>
+
+<div ng-if="testState == 2">
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+        </div>
+    </div>
+    <button class="btn btn-success btn-lg" ng-disabled="isPlayingSound">
+        <span class="glyphicon glyphicon-play" aria-hidden="true" ng-click="playSound()">Újra</span>
+    </button>
+    <div ng-if="circleVisible">
+        <canvas id="pie" class="chart chart-pie" data="data" labels="labels" click="chooseColor"></canvas>
+    </div>
+    <div ng-if="!circleVisible" style="height: 355px">
+    csukd be szemed
+    </div>
+</div>
+
+<button class="btn btn-primary btn-lg" ng-hide="testState == 2 || testState == 3" ng-click="nextState()" ng-disabled="isPlayingSound">Tovább</button>

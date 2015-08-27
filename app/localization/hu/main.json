@@ -1,8 +1,16 @@
 {
-	"title": "A cím",
-	"menu": {
-		"home": "Kezdőlap",
-		"test": "Teszt",
-		"results": "Eredmények"
-	}
+    "title": "A cím",
+    "menu": {
+        "home": "Kezdőlap",
+        "test": "Teszt",
+        "results": "Eredmények"
+    },
+    "label": {
+        "sex": "Nem",
+        "age": "Életkor",
+        "level": "Zenében jártasság"
+    },
+    "value": {
+        "man": "Férfi",
+    }
 }

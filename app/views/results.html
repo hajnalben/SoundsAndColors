@@ -1,1 +1,11 @@
-<p>This is the results view.</p>
+<div ng-show="fromTest">
+    Köszi a teszt kitöltését....
+</div>
+<h2>Eddigi eredmények</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-xs-12" ng-repeat="(key, value) in aggs">
+            <canvas id="doughnut-{{key}}" class="chart chart-doughnut" data="value.data" labels="colors" options="{showTooltips: true}"></canvas>
+        </div>
+    </div>
+</div>
