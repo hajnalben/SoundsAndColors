@@ -18,7 +18,7 @@
         "level": {
             "none": "Level 1",
             "beginner": "Level 2",
-            "advance": "Leve 3",
+            "advanced": "Leve 3",
             "expert": "Level 4"
         }
     },

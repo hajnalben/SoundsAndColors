@@ -18,7 +18,7 @@
         "level": {
             "none": "Zuhany alatt éneklő",
             "beginner": "Tanultam valamennyit",
-            "advance": "Sokat tanultam, használom is tudásom",
+            "advanced": "Sokat tanultam, használom is tudásom",
             "expert": "Ebből élek"
         }
     },

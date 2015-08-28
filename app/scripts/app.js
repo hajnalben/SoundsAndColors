@@ -213,7 +213,7 @@ angular
             colours: colors.chartColors,
             responsive: true,
             showTooltips: false,
-            animationEasing: "easeOutQuart",
+            animationEasing: 'easeOutQuart',
             animationSteps: 60,
         });
 
