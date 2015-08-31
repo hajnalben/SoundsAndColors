@@ -215,6 +215,7 @@ angular
             showTooltips: false,
             animationEasing: 'easeOutQuart',
             animationSteps: 60,
+            maintainAspectRatio: true
         });
 
     }])

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title translate="title"></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -20,16 +20,15 @@
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-    <!-- Add your site or application content here -->
-    <div ng-include src="'views/menu.html'"></div>
-    <div class="container">
-        <div ng-view=""></div>
+    <div id="wrapper">
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="menu" ng-include src="'views/menu.html'"></div>
+        <div id="content" class="container" ng-view=""></div>
+        <div id="footer" ng-include src="'views/footer.html'"></div>
     </div>
-    <div ng-include src="'views/footer.html'"></div>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+
     <script>
     ! function(A, n, g, u, l, a, r) {
         A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
@@ -40,6 +39,7 @@
     ga('create', 'UA-47315785-2', 'auto');
     ga('send', 'pageview');
     </script>
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -69,6 +69,7 @@
     <script src="scripts/controllers/results.js"></script>
     <script src="scripts/controllers/home.js"></script>
     <script src="scripts/services/stopwatch.js"></script>
+    <script src="scripts/services/fccaggservice.js"></script>
     <!-- endbuild -->
 </body>
 
