@@ -1,33 +1,35 @@
 {
-    "title": "A cím",
+    "title": "Hallható színek, látható hangok",
     "menu": {
         "home": "Kezdőlap",
         "test": "Teszt",
         "results": "Eredmények"
     },
     "label": {
-        "sex": "Nem",
-        "age": "Életkor",
-        "level": "Zenében jártasság",
-        "replay": "Újra",
-        "next": "Tovább"
+        "sex": "Nemed",
+        "age": "Életkorod",
+        "level": "Zenei jártasságod",
+        "replay": "Hallgass meg újra",
+        "next": "Kérem a következőt! "
     },
     "value": {
         "man": "Férfi",
         "woman": "Nő",
         "level": {
-            "none": "Zuhany alatt éneklő",
-            "beginner": "Tanultam valamennyit",
-            "advanced": "Sokat tanultam, használom is tudásom",
-            "expert": "Ebből élek"
+            "none": " zenét hallgatóként élvező, fürdőkádban énekesnő/énekes vagyok",
+            "beginner": "Autodidakta mód elsajátított hangszertudás/énektudással bírok",
+            "medium":"Iskolarendszerben tanult, de később nem használt tudással rendelkezem ",
+            "advanced": "Iskolarendszerben tanult, jelenleg is hasznosított tudással élem életem",
+            "expert": "Hivatásomként tekinthetek rá"
         }
     },
     "text": {
-        "testIntro": "Most izét fogsz kitölteni.... lesz x másodperced rá, hogy ...",
-        "closeYourEyes": "Csukd be szemed",
-        "footer": "Ez a lábléc, ide lehet írni infókat",
-        "welcome": "Sziasztok ...!",
-        "about": "Ez egy teszt, ami...",
-        "proceedToTest": "Tovább a tesztre"
+        "testIntro": "Most a Neked szánt hangokkal fogsz megismerkedni.... lesz 10 másodperced rá, hogy a meghallgatott hangra a megjelenő színkörben megjelölj egy színt. Amennyiben úgy érzed szükséged van arra, hogy ismételten meghallgasd az adott hangot, úgy lehetőséged van erre, használd a hallgass meg újra lehetőséget. ",
+        "closeYourEyes": "Csukd be szemed, segíteni fog, hogy ráhangolódj a hallhatatlanra, a hangok szépen sorban váltják fel majd egymást, amikor egy hang elcsendesedett nincs más tennivalód, csak kinyitod a szemed és a színkörben érzésből kiválasztasz egy színt, ezt követően ismét lehunyhatod a szemed és így megy ez 12 hangon keresztül, végül vár egy apró meglepetés, melyet a 12 hangból írtam Nektek és ezen dallamot meghallgatva is meg kell nevezzetek egyetlen színt.",
+        "footer": " Elérhetőség: hallhatoszinek@gmail.com | A programok és a látvány szülei: Hajnal Benjámin és Tok Dániel. | A hangokat zajmentesítette: Magi Krisztián ",
+        "welcome": "Üdvözöllek az úton a szakdolgozatomhoz!",
+        "about": "Szerző Zsuzsa vagyok a Károli Gáspár Református Egyetem Képi Kifejezéspszichológia szaktanácsadó végzős hallgatója. Szakdolgozatomban a hangok és a színek észlelésével kapcsolatban végzem kutatásom, ebben pedig a Ti segítségetekre van szükségem, a teszt önjáró, amikor végeztél segítsd kérlek tovább az útját :)." ,
+        "test": " Ez egy teszt, amiben  a 12 hangot fogsz meghallgatni, ezért állítsd a hangerőt úgy, ahogyan számodra élvezhetővé, értelmezhetővé válik a hangerő, Instrukcióként nyújtom, hogy egyesével kapod majd meg Tőlünk a hangokat, mely meghallgatását követően jobb oldalt egy színkörből meg kell nevezned egy színt, tehát egyszerűen arra vagyok minden esetben kíváncsi, hogy az általad érzékelt hang, milyen színérzetet kelt benned, ezt követően még arra, hogy ez pozitív, meleg, vagy negatív hideg élmény nyújtott.",
+        "proceedToTest": "Lássuk a tesztet"
     }
 }

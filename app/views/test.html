@@ -17,7 +17,7 @@
         </div>
         <div class="form-group">
             <h3 translate="label.age"></h3>
-            <rzslider rz-slider-model="age" rz-slider-floor="4" rz-slider-ceil="99"></rzslider>
+            <rzslider rz-slider-model="age" rz-slider-floor="18" rz-slider-ceil="99"></rzslider>
         </div>
         <div class="form-group">
             <h3 translate="label.level"></h3>
@@ -35,6 +35,12 @@
             </div>
             <div class="radio">
                 <label>
+                    <input type="radio" value="2" ng-model="level" />
+                    <span translate="value.level.medium"></span>
+                </label>
+            </div>
+            <div class="radio">
+                <label>
                     <input type="radio" value="3" ng-model="level" />
                     <span translate="value.level.advanced"></span>
                 </label>
@@ -48,22 +54,23 @@
         </div>
     </form>
 </div>
-<div ng-if="testState == 1">
-    <span translate="text.testIntro"></span>
+<div class="intro" ng-if="testState == 1">
+    <span translate="text.testIntro"></span><br><br>
+    <span translate="text.closeYourEyes"></span>
 </div>
 <div ng-if="testState == 2">
-    <button class="btn btn-success btn-lg" ng-disabled="isPlayingSound">
-        <span class="glyphicon glyphicon-play" aria-hidden="true" ng-click="playSound()" translate="label.replay"></span>
+    <button class="btn btn-success" ng-disabled="isPlayingSound">
+        <span aria-hidden="true" ng-click="playSound()" translate="label.replay"></span>
     </button>
     <div ng-if="circleVisible">
         <canvas id="pie" class="chart chart-pie" data="data" labels="labels" click="chooseColor"></canvas>
     </div>
     <div ng-if="!circleVisible" style="height: 355px">
-        <span translate="text.closeYourEyes"></span>
+        
     </div>
     <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
         </div>
     </div>
 </div>
-<button class="btn btn-primary btn-lg" ng-hide="testState == 2 || testState == 3" ng-click="nextState()" ng-disabled="isPlayingSound" translate="label.next"></button>
+<button class="btn btn-primary" ng-hide="testState == 2 || testState == 3" ng-click="nextState()" ng-disabled="isPlayingSound" translate="label.next"></button>
