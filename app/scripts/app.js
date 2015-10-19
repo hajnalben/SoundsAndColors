@@ -74,7 +74,7 @@ angular
         localStorageServiceProvider.setPrefix('ls');
     }])
     .constant('colors', fillColors())
-    .constant('files', ['a.m4a', 'b.m4a', 'c.m4a', 'd.m4a', 'e.m4a', 'f.m4a', 'g.m4a', 'h.m4a', 'i.m4a', 'j.m4a', 'k.m4a', 'l.m4a', 'm.m4a'])
+    .constant('files', ['a.mp3', 'b.mp3', 'c.mp3', 'd.mp3', 'e.mp3', 'f.mp3', 'g.mp3', 'h.mp3', 'i.mp3', 'j.mp3', 'k.mp3', 'l.mp3', 'm.mp3'])
     .config(['ChartJsProvider', 'colors', function (ChartJsProvider, colors) {
 
         // Configure all charts

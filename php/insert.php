@@ -24,6 +24,7 @@ try {
     $data['sex'] = $post['sex'];
     $data['age'] = $post['age'];
     $data['level'] = $post['level'];
+    $data['harder'] = $post['harder'];
     $data['session'] = session_id();
 
     foreach ($post['sounds'] as $s) {
@@ -32,6 +33,7 @@ try {
         $sound['file'] = $s['file'];
         $sound['time'] = $s['time'];
         $sound['color'] = $s['color'];
+        $sound['side'] = $s['side'];
 
         $data->ownSoundList[] = $sound;
     }
