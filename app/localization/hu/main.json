@@ -10,7 +10,11 @@
         "age": "Életkorod",
         "level": "Zenei jártasságod",
         "replay": "Hallgass meg újra",
-        "next": "Kérem a következőt! "
+        "next": "Kérem a következőt! ",
+        "positive": "Pozitív",
+        "negative": "Negatív",
+        "part" : "Hangonként",
+        "full" : "Egész"
     },
     "value": {
         "man": "Férfi",
@@ -18,7 +22,7 @@
         "level": {
             "none": " zenét hallgatóként élvező, fürdőkádban énekesnő/énekes vagyok",
             "beginner": "Autodidakta mód elsajátított hangszertudás/énektudással bírok",
-            "medium":"Iskolarendszerben tanult, de később nem használt tudással rendelkezem ",
+            "medium": "Iskolarendszerben tanult, de később nem használt tudással rendelkezem ",
             "advanced": "Iskolarendszerben tanult, jelenleg is hasznosított tudással élem életem",
             "expert": "Hivatásomként tekinthetek rá"
         }
@@ -28,8 +32,10 @@
         "closeYourEyes": "Csukd be szemed, segíteni fog, hogy ráhangolódj a hallhatatlanra, a hangok szépen sorban váltják fel majd egymást, amikor egy hang elcsendesedett nincs más tennivalód, csak kinyitod a szemed és a színkörben érzésből kiválasztasz egy színt, ezt követően ismét lehunyhatod a szemed és így megy ez 12 hangon keresztül, végül vár egy apró meglepetés, melyet a 12 hangból írtam Nektek és ezen dallamot meghallgatva is meg kell nevezzetek egyetlen színt.",
         "footer": " Elérhetőség: hallhatoszinek@gmail.com | A programok és a látvány szülei: Hajnal Benjámin és Tok Dániel. | A hangokat zajmentesítette: Magi Krisztián ",
         "welcome": "Üdvözöllek az úton a szakdolgozatomhoz!",
-        "about": "Szerző Zsuzsa vagyok a Károli Gáspár Református Egyetem Képi Kifejezéspszichológia szaktanácsadó végzős hallgatója. Szakdolgozatomban a hangok és a színek észlelésével kapcsolatban végzem kutatásom, ebben pedig a Ti segítségetekre van szükségem, a teszt önjáró, amikor végeztél segítsd kérlek tovább az útját :)." ,
+        "about": "Szerző Zsuzsa vagyok a Károli Gáspár Református Egyetem Képi Kifejezéspszichológia szaktanácsadó végzős hallgatója. Szakdolgozatomban a hangok és a színek észlelésével kapcsolatban végzem kutatásom, ebben pedig a Ti segítségetekre van szükségem, a teszt önjáró, amikor végeztél segítsd kérlek tovább az útját :).",
         "test": " Ez egy teszt, amiben  a 12 hangot fogsz meghallgatni, ezért állítsd a hangerőt úgy, ahogyan számodra élvezhetővé, értelmezhetővé válik a hangerő, Instrukcióként nyújtom, hogy egyesével kapod majd meg Tőlünk a hangokat, mely meghallgatását követően jobb oldalt egy színkörből meg kell nevezned egy színt, tehát egyszerűen arra vagyok minden esetben kíváncsi, hogy az általad érzékelt hang, milyen színérzetet kelt benned, ezt követően még arra, hogy ez pozitív, meleg, vagy negatív hideg élmény nyújtott.",
-        "proceedToTest": "Lássuk a tesztet"
+        "proceedToTest": "Lássuk a tesztet",
+        "feelings": "Pozitív vagy negatív érzést váltott ki benned a hang?",
+        "harder": "Melyikhez volt könyebb a szín választása?"
     }
 }

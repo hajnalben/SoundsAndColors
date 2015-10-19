@@ -9,11 +9,11 @@
  */
 angular.module('soundsAndColorsApp')
     .controller('TestCtrl', ['$scope', '$timeout', 'stopwatch', '$location', '$http', 'files',
-        function($scope, $timeout, stopwatch, $location, $http, files) {
+        function ($scope, $timeout, stopwatch, $location, $http, files) {
 
             $scope.testState = 0;
 
-            $scope.nextState = function() {
+            $scope.nextState = function () {
                 $scope.testState++;
 
                 if ($scope.testState === 2) {
@@ -27,108 +27,127 @@ angular.module('soundsAndColorsApp')
             $scope.level = 1;
 
             // Sound test
-            $scope.soundState = 0;
             $scope.progress = 0;
-            $scope.circleVisible = false;
-            $scope.isPlayingSound = false;
+            $scope.trackIndex = 0;
+            $scope.trackState = 0;
+            $scope.selectedColor = null;
 
-            $scope.playSound = function() {
-                if ($scope.isPlayingSound) {
-                    return;
-                }
+            $scope.playSound = function () {
+                // Resetting state
+                $scope.trackState = 0;
 
-                $scope.isPlayingSound = true;
-                $scope.circleVisible = false;
+                var track = new Audio('sounds/' + files[$scope.trackIndex]);
 
-                var track = new Audio('sounds/' + files[$scope.soundState]);
+                console.log('Waiting before sound');
 
-                console.log('Wait before sound');
+                $timeout(playTrack, 2000).then(waitAfterTrack);
 
-                // 2 sec vár
-                $timeout(function() {
-
-                    // hangot lejátszik
+                function playTrack() {
                     console.log('Playing sound');
 
                     track.play();
+                }
 
-                }, 2000).then(function() {
-
+                function waitAfterTrack() {
                     console.log('Waiting for sound to end');
 
-                    // hangot és + 1 sec-et vár
-                    $timeout(function() {
-                        console.log('Painting circle');
+                    $timeout(paintCircle, track.duration * 1000 + 1000);
+                }
 
-                        $scope.isPlayingSound = false;
-                        $scope.circleVisible = true;
-                        stopwatch.start();
+                function paintCircle() {
+                    console.log('Painting circle');
 
-                    }, track.duration * 1000 + 1000);
-
-                });
+                    $scope.trackState = 1;
+                    stopwatch.start();
+                }
             };
 
-            $scope.chooseColor = function(points) {
+            $scope.chooseColor = function (points) {
+                $scope.selectedColor = points[0].fillColor;
+                $scope.trackState = 2;
+            };
 
+            $scope.chooseSide = function (side) {
+                $scope.side = side;
+
+                addSound();
+            };
+
+            $scope.chooseHarder = function (harder) {
+                $scope.harder = harder;
+
+                insertSounds();
+            };
+
+            function addSound() {
                 var sound = {
-                    file: files[$scope.soundState],
+                    file: files[$scope.trackIndex],
                     time: stopwatch.reset(),
-                    color: points[0].fillColor
+                    color: $scope.selectedColor,
+                    side: $scope.side
                 };
 
                 sounds.push(sound);
 
+                console.log('Saving sound');
                 console.log(sound);
 
-                if ($scope.soundState >= files.length - 1) {
-                    $scope.progress = 100;
+                nextSound();
+            }
 
-                    // Adatok felküldése egyben
+            function nextSound() {
+                if ($scope.trackIndex < files.length - 1) {
 
-                    $http.post('/insert.php', {
-                        sex: $scope.sex,
-                        age: $scope.age,
-                        level: $scope.level,
-                        sounds: sounds
-                    }).
-                    then(function(response) {
-                        // this callback will be called asynchronously
-                        // when the response is available
+                    $scope.trackIndex++;
+                    $scope.progress = Math.ceil(($scope.trackIndex / files.length) * 100);
 
-                        console.log(response);
-
-                        $location.search({
-                            'fromTest': 'true'
-                        });
-
-                        $location.path('results');
-
-                    }, function(response) {
-                        // called asynchronously if an error occurs
-                        // or server returns response with an error status.
-
-                        console.log(response);
-
-                        $location.search({
-                            'error': 'true'
-                        });
-
-                        $location.path('results');
-                    });
+                    $scope.playSound();
 
                     return;
                 }
 
-                $scope.soundState++;
-                $scope.progress = Math.ceil(($scope.soundState / files.length) * 100);
+                $scope.progress = 100;
 
-                $scope.playSound();
-            };
+                $scope.testState = 3;
+            }
+
+            function insertSounds() {
+
+                $http.post('/insert.php', {
+                    sex: $scope.sex,
+                    age: $scope.age,
+                    level: $scope.level,
+                    harder: $scope.harder,
+                    sounds: sounds
+                }).
+                then(function (response) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+
+                    console.log(response);
+
+                    $location.search({
+                        'fromTest': 'true'
+                    });
+                    $location.path('results');
+
+                }, function (response) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+
+                    console.log(response);
+
+                    $location.search({
+                        'error': 'true'
+                    });
+
+                    $location.path('results');
+                });
+            }
 
             // Needed for rendering only
-            $scope.labels = ['', '', '', '', '', '', '', '', '', '', '', ''];
-            $scope.data = [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30];
+            $scope.labels = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
+            $scope.data = [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20];
 
             // Results
             var sounds = [];

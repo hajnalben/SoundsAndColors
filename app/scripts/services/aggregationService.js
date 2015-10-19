@@ -56,7 +56,7 @@ angular.module('soundsAndColorsApp')
 
                     console.log(response);
 
-                    return handle(response);
+                    return handle(response.data);
 
                 }, function(response) {
                     // called asynchronously if an error occurs

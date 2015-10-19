@@ -55,22 +55,48 @@
     </form>
 </div>
 <div class="intro" ng-if="testState == 1">
-    <span translate="text.testIntro"></span><br><br>
+    <span translate="text.testIntro"></span>
+    <br>
+    <br>
     <span translate="text.closeYourEyes"></span>
 </div>
 <div ng-if="testState == 2">
-    <button class="btn btn-success" ng-disabled="isPlayingSound">
-        <span aria-hidden="true" ng-click="playSound()" translate="label.replay"></span>
-    </button>
-    <div ng-if="circleVisible">
-        <canvas id="pie" class="chart chart-pie" data="data" labels="labels" click="chooseColor"></canvas>
+
+    <div class="circle-container" style="height: 400px">
+
+        <div ng-show="trackState == 1">
+            <button class="btn btn-success">
+                <span aria-hidden="true" ng-click="playSound()" translate="label.replay"></span>
+            </button>
+
+            <canvas id="pie" class="chart chart-pie" data="data" labels="labels" click="chooseColor"></canvas>
+        </div>
+
+        <div ng-show="trackState == 2">
+            <p translate="text.feelings"></p>
+            <div class="btn-group btn-group-justified" role="group">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" translate="label.positive" ng-click="chooseSide('+')"></button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" translate="label.negative" ng-click="chooseSide('-')"></button>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div ng-if="!circleVisible" style="height: 355px">
-        
-    </div>
+
     <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
         </div>
+    </div>
+
+</div>
+<div class="intro" ng-if="testState == 3">
+    <p translate="text.harder"></p>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" translate="label.part" ng-click="chooseHarder('part')"></button>
+        <button type="button" class="btn btn-default" translate="label.full" ng-click="chooseHarder('full')"></button>
     </div>
 </div>
 <button class="btn btn-primary" ng-hide="testState == 2 || testState == 3" ng-click="nextState()" ng-disabled="isPlayingSound" translate="label.next"></button>

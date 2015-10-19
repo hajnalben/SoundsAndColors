@@ -10,7 +10,11 @@
         "age": "Age",
         "level": "Skills in music",
         "replay": "Replay",
-        "next": "Next"
+        "next": "Next",
+        "positive": "Positive",
+        "negative": "Negative",
+        "part" : "By sounds",
+        "full" : "Full track"
     },
     "value": {
         "man": "Male",
@@ -28,6 +32,8 @@
         "footer": "This it the footer",
         "welcome": "Welcome to my test!",
         "about": "The test is about...",
-        "proceedToTest": "Let's start the test"
+        "proceedToTest": "Let's start the test",
+        "feelings": "Did you feel positive or negative?",
+        "harder": "Which was easier to click?"
     }
 }
