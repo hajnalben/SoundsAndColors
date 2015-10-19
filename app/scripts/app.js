@@ -44,7 +44,7 @@ function fillColors() {
     return {
         chartColors: chartColors,
         hexColors: hexColors,
-        colors: colors
+        colors:  Object.keys(colors)
     };
 }
 
