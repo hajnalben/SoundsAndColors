@@ -15,7 +15,7 @@ angular.module('soundsAndColorsApp')
             $scope.files = files;
 
 
-            aggregationService.getFileColorCount().then(function(aggs) {console.log(aggs);
+            aggregationService.getFileColorCount().then(function(aggs) {
                 $scope.aggs = aggs;
             });
         }

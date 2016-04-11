@@ -1,5 +1,5 @@
 {
-    "title": "The title",
+    "title": "Audible colours, visible sounds",
     "menu": {
         "home": "Home",
         "test": "Test",
@@ -9,9 +9,12 @@
         "sex": "Sex",
         "age": "Age",
         "level": "Skills in music",
-        "replay": "Replay",
-        "next": "Next",
+        "replay": "Listen to it again.",
+        "next": "Next, please",
         "positive": "Positive",
+        "semipositive": "A bit positive",
+        "neutral": "Neutral",
+        "seminegative": "A bit negative",
         "negative": "Negative",
         "part" : "By sounds",
         "full" : "Full track"
@@ -20,20 +23,27 @@
         "man": "Male",
         "woman": "Female",
         "level": {
-            "none": "Level 1",
-            "beginner": "Level 2",
-            "advanced": "Leve 3",
-            "expert": "Level 4"
+            "none": "I enjoy listening to music, I am like singing in the bath",
+            "beginner": "I learnt my skills to play an instrument or sing in a self-educated manner",
+            "medium": "I learnt some skills at school, but I have not used them afterwards",
+            "advanced": "I learnt some skills at school, and I still use them",
+            "expert": "I use it in my professional career"
         }
     },
     "text": {
-        "testIntro": "You are going to... You will have x secs to ...",
-        "closeYourEyes": "Now close your eyes",
-        "footer": "This it the footer",
-        "welcome": "Welcome to my test!",
-        "about": "The test is about...",
-        "proceedToTest": "Let's start the test",
-        "feelings": "Did you feel positive or negative?",
-        "harder": "Which was easier to click?"
-    }
+        "testIntro": "And now, you are going to hear the sounds… You will have 10 seconds to select a colour within the circle that appears regarding the sound. If you feel you need to listen to the sound again, you can do so by clicking on the ‘Listen again’ button.",
+        "closeYourEyes": "Close your eyes; it will assist you to get tuned to the COLOURS OF THE SOUNDS. The sounds will come one after another, and once a sound has stopped, the only thing you need to do is to choose a colour in the circle togetherwith a feeling corresponding to it. You can then close your eyes again, and repeat the step for 12 sounds. Finally, there is a small surprise in the end, which is a tune I composed for you using the 12 sounds. Once you listen to this tune, you will also have to select a colour and a feeling.",
+        "footer": "Contact: hallhatoszinek@gmail.com | Parents of the programs and views: Hajnal Benjámin és Tok Dániel. | Noise reduction in the sounds done by: Magi Krisztián ",
+        "welcome": "Welcome to the journey to my final thesis!",
+        "about": "I am Zsuzsa Szerző, a final year student of Károli Gáspár University of the Reformed Church. I have been doing a research for my final thesis that is about the perception of sounds and colours, and I need your help. The test goes around automatically, so please help forwarding it others :).",
+        "test": " Ez egy teszt, amiben  a 12 hangot fogsz meghallgatni, ezért állítsd a hangerőt úgy, ahogyan számodra élvezhetővé, értelmezhetővé válik a hangerő, Instrukcióként nyújtom, hogy egyesével kapod majd meg Tőlünk a hangokat, mely meghallgatását követően jobb oldalt egy színkörből meg kell nevezned egy színt, tehát egyszerűen arra vagyok minden esetben kíváncsi, hogy az általad érzékelt hang, milyen színérzetet kelt benned, ezt követően még arra, hogy ez pozitív, meleg, vagy negatív hideg élmény nyújtott.",
+        "proceedToTest": "Let’s see the test",
+        "feelings": "Did the sound make you feel positively or negatively?",
+        "harder": "Which of them was easier to choose a colour for?",
+        "testdetails": "IN ORDER TO SUCCESSFULLY COMPLETE THE TEST, YOU WILL NEED SOME PERSEVERENCE, A LITTLE TIME (5–10 minutes) AND YOUR SPEAKER TURNED ON."
+    },
+    "note": "{{index}}. note",
+    "melody": "Melody",
+    "thanks": "Thank you for completing the test...",
+    "results-so-far": "Results so far"
 }

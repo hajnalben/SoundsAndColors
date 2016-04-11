@@ -35,19 +35,19 @@
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" value="2" ng-model="level" />
+                    <input type="radio" value="3" ng-model="level" />
                     <span translate="value.level.medium"></span>
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" value="3" ng-model="level" />
+                    <input type="radio" value="4" ng-model="level" />
                     <span translate="value.level.advanced"></span>
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" value="4" ng-model="level" />
+                    <input type="radio" value="5" ng-model="level" />
                     <span translate="value.level.expert"></span>
                 </label>
             </div>
@@ -64,7 +64,7 @@
 
     <div class="circle-container" style="height: 400px">
 
-        <div ng-show="trackState == 1">
+        <div ng-if="trackState == 1">
             <button class="btn btn-success">
                 <span aria-hidden="true" ng-click="playSound()" translate="label.replay"></span>
             </button>
@@ -74,13 +74,13 @@
 
         <div ng-show="trackState == 2">
             <p translate="text.feelings"></p>
-            <div class="btn-group btn-group-justified" role="group">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default" translate="label.positive" ng-click="chooseSide('+')"></button>
-                </div>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default" translate="label.negative" ng-click="chooseSide('-')"></button>
-                </div>
+            
+            <div class="btn-group" role="group" style="margin:0 auto;">
+                <button type="button" class="btn btn-default" translate="label.positive" ng-click="chooseSide('-2')"></button>
+                <button type="button" class="btn btn-default" translate="label.semipositive" ng-click="chooseSide('-1')"></button>
+                <button type="button" class="btn btn-default" translate="label.neutral" ng-click="chooseSide('0')"></button>
+                <button type="button" class="btn btn-default" translate="label.seminegative" ng-click="chooseSide('+1')"></button>
+                <button type="button" class="btn btn-default" translate="label.negative" ng-click="chooseSide('+2')"></button>
             </div>
         </div>
 
