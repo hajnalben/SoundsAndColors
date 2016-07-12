@@ -22,9 +22,11 @@ angular.module('soundsAndColorsApp')
             };
 
             // Pre-questions
-            $scope.sex = 'man';
-            $scope.age = 25;
-            $scope.level = 1;
+            $scope.formData = {
+                sex : 'man',
+                age : 25,
+                level : 1
+            };
 
             // Sound test
             $scope.progress = 0;
@@ -114,9 +116,9 @@ angular.module('soundsAndColorsApp')
             function insertSounds() {
 
                 $http.post('/insert.php', {
-                    sex: $scope.sex,
-                    age: $scope.age,
-                    level: $scope.level,
+                    sex: $scope.formData.sex,
+                    age: $scope.formData.age,
+                    level: $scope.formData.level,
                     harder: $scope.harder,
                     sounds: sounds
                 }).
